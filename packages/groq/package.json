@@ -1,7 +1,7 @@
 {
-  "name": "@mem0-community/pgvector",
+  "name": "@mem0-community/groq",
   "version": "0.1.0",
-  "description": "PostgreSQL + pgvector store adapter for mem0-community.",
+  "description": "Groq embedder and LLM adapter for mem0-community.",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -26,16 +26,15 @@
   },
   "dependencies": {
     "@mem0-community/core": "workspace:*",
-    "pg": "^8.11.3"
+    "groq-sdk": "^0.3.0"
   },
   "devDependencies": {
-    "@types/pg": "^8.11.0",
     "rimraf": "^5.0.10"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mem0-community/mem0-ts.git",
-    "directory": "packages/pgvector"
+    "directory": "packages/groq"
   },
   "homepage": "https://github.com/mem0-community/mem0-ts#readme",
   "bugs": {
@@ -44,9 +43,8 @@
   "author": "mem0-community",
   "keywords": [
     "mem0",
-    "pgvector",
-    "postgresql",
-    "vector-store"
+    "groq",
+    "llm"
   ],
   "publishConfig": {
     "access": "public"

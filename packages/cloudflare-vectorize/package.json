@@ -1,7 +1,7 @@
 {
-  "name": "@mem0-community/pgvector",
+  "name": "@mem0-community/cloudflare-vectorize",
   "version": "0.1.0",
-  "description": "PostgreSQL + pgvector store adapter for mem0-community.",
+  "description": "Cloudflare Vectorize vector store adapter for mem0-community.",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -26,16 +26,16 @@
   },
   "dependencies": {
     "@mem0-community/core": "workspace:*",
-    "pg": "^8.11.3"
+    "cloudflare": "^4.2.0"
   },
   "devDependencies": {
-    "@types/pg": "^8.11.0",
+    "@cloudflare/workers-types": "^4.20250504.0",
     "rimraf": "^5.0.10"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mem0-community/mem0-ts.git",
-    "directory": "packages/pgvector"
+    "directory": "packages/cloudflare-vectorize"
   },
   "homepage": "https://github.com/mem0-community/mem0-ts#readme",
   "bugs": {
@@ -44,8 +44,8 @@
   "author": "mem0-community",
   "keywords": [
     "mem0",
-    "pgvector",
-    "postgresql",
+    "cloudflare",
+    "vectorize",
     "vector-store"
   ],
   "publishConfig": {

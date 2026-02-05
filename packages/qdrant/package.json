@@ -31,6 +31,21 @@
   "devDependencies": {
     "rimraf": "^5.0.10"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mem0-community/mem0-ts.git",
+    "directory": "packages/qdrant"
+  },
+  "homepage": "https://github.com/mem0-community/mem0-ts#readme",
+  "bugs": {
+    "url": "https://github.com/mem0-community/mem0-ts/issues"
+  },
+  "author": "mem0-community",
+  "keywords": [
+    "mem0",
+    "qdrant",
+    "vector-store"
+  ],
   "publishConfig": {
     "access": "public"
   }
