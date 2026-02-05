@@ -1,6 +1,6 @@
 {
   "name": "@mem0-community/redis",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Redis vector store and history manager adapter for mem0-community.",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
@@ -25,7 +25,7 @@
     "lint": "prettier --check src/"
   },
   "dependencies": {
-    "@mem0-community/core": "workspace:*",
+    "@mem0-community/core": "^0.1.1",
     "redis": "^4.6.13"
   },
   "devDependencies": {
