@@ -66,6 +66,41 @@ const results = await memory.search("What programming language does Alice like?"
 });
 ```
 
+## Bundle Size Comparison
+
+The official `mem0ai` ships as a single 1.17 MB package that eagerly imports **all** providers — including native addons like `sqlite3` (3.3 MB) that crash serverless runtimes.
+
+With `@mem0-community`, you install only what you need:
+
+| Setup | Packages | Package Size | Native Deps |
+|-------|----------|-------------|-------------|
+| **Official** `mem0ai` (all-in-one) | 1 | 1,170 kB | `sqlite3` (3.3 MB), `pg`, `uuid`, `axios` |
+| **Community** core + OpenAI + Qdrant | 3 | **37 kB** | None |
+| **Community** core + Anthropic + Redis | 3 | **41 kB** | None |
+| **Community** core only | 1 | **30 kB** | None |
+
+<details>
+<summary>Per-package sizes</summary>
+
+| Package | Packed | Unpacked |
+|---------|--------|----------|
+| `@mem0-community/core` | 30.2 kB | 155.2 kB |
+| `@mem0-community/openai` | 2.9 kB | 17.3 kB |
+| `@mem0-community/anthropic` | 3.0 kB | 16.0 kB |
+| `@mem0-community/google` | 2.7 kB | 15.7 kB |
+| `@mem0-community/azure-openai` | 3.1 kB | 19.0 kB |
+| `@mem0-community/groq` | 2.1 kB | 8.1 kB |
+| `@mem0-community/mistral` | 2.7 kB | 13.5 kB |
+| `@mem0-community/ollama` | 3.5 kB | 24.7 kB |
+| `@mem0-community/qdrant` | 4.2 kB | 27.9 kB |
+| `@mem0-community/pgvector` | 4.5 kB | 30.2 kB |
+| `@mem0-community/redis` | 7.5 kB | 57.7 kB |
+| `@mem0-community/supabase` | 5.5 kB | 40.5 kB |
+| `@mem0-community/azure-ai-search` | 7.9 kB | 59.1 kB |
+| `@mem0-community/cloudflare-vectorize` | 6.5 kB | 41.9 kB |
+
+</details>
+
 ## Design Principles
 
 - **Import only what you use** — No eager loading of unused providers

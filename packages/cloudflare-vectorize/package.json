@@ -1,6 +1,6 @@
 {
   "name": "@mem0-community/cloudflare-vectorize",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cloudflare Vectorize vector store adapter for mem0-community.",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
