@@ -1,0 +1,38 @@
+{
+  "name": "@mem0-community/pgvector",
+  "version": "0.1.0",
+  "description": "PostgreSQL + pgvector store adapter for mem0-community.",
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "prettier --check src/"
+  },
+  "dependencies": {
+    "@mem0-community/core": "workspace:*",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "rimraf": "^5.0.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
